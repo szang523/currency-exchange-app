@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAAA,QACE,wBACF,CAEA,QACE,wBACF","file":"main.1f58325c.chunk.css","sourcesContent":[".navbar {\n  background-color: #dff6cc;\n}\n\n.footer {\n  background-color: #65acb0;\n}\n"]}

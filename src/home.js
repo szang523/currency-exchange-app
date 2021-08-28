@@ -2,6 +2,7 @@ import React from 'react';
 import currencies from './utils/currencies';
 import { checkStatus, json } from './utils/fetchUtils';
 import CurrencyTable from './CurrencyTable';
+import CurrencyConverter from './CurrencyConverter';
 
 class Home extends React.Component {
   constructor() {
@@ -24,7 +25,7 @@ class Home extends React.Component {
 
   getRatesData = (base) => {
     this.setState({ loading: true });
-    fetch(`https://alt-exchange-rate.herokuapp.com/latest?base=${base}`)
+    fetch(`https://altexchangerateapi.herokuapp.com/latest?from=${base}`)
       .then(checkStatus)
       .then(json)
       .then(data => {
@@ -51,6 +52,7 @@ class Home extends React.Component {
 
     return (
       <React.Fragment>
+        <CurrencyConverter/>
         <form className="p-3 bg-light form-inline justify-content-center">
           <h3 className="mb-2">Base currency: <b className="mr-2">1</b></h3>
           <select value={base} onChange={this.changeBase} className="form-control form-control-lg mb-2" disabled={loading}>

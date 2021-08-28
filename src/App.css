@@ -5,3 +5,15 @@
 .footer {
   background-color: #65acb0;
 }
+
+.form-control {
+  text-align: center;
+}
+
+.form-group {
+  justify-content: center;
+}
+
+option {
+  text-align: center;
+}
