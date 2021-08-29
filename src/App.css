@@ -17,3 +17,8 @@
 option {
   text-align: center;
 }
+
+.currency-table {
+  max-height: 316px;
+  overflow: scroll;
+}

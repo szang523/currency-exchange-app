@@ -52,14 +52,24 @@ class Home extends React.Component {
 
     return (
       <React.Fragment>
-        <CurrencyConverter/>
-        <form className="p-3 bg-light form-inline justify-content-center">
-          <h3 className="mb-2">Base currency: <b className="mr-2">1</b></h3>
-          <select value={base} onChange={this.changeBase} className="form-control form-control-lg mb-2" disabled={loading}>
-            {Object.keys(currencies).map(currencyAcronym => <option key={currencyAcronym} value={currencyAcronym}>{currencyAcronym}</option>)}
-          </select>
-        </form>
-        <CurrencyTable base={base} rates={rates} />
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-6">
+              <CurrencyConverter/>
+            </div>
+            <div className="col-sm-6">
+                <form className="p-3 bg-light form-inline justify-content-center">
+                  <h3 className="mb-2">Base currency: <b className="mr-2">1</b></h3>
+                  <select value={base} onChange={this.changeBase} className="form-control form-control-lg mb-2" disabled={loading}>
+                    {Object.keys(currencies).map(currencyAcronym => <option key={currencyAcronym} value={currencyAcronym}>{currencyAcronym}</option>)}
+                  </select>
+                </form>
+                <div className="currency-table">
+                <CurrencyTable base={base} rates={rates} />
+                </div>
+            </div>
+          </div>
+        </div>
       </React.Fragment>
     )
   }
