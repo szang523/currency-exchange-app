@@ -147,7 +147,7 @@ class CurrencyConverter extends React.Component {
 
     return (
       <React.Fragment>
-        <div className="text-center p-3">
+        <div className="text-center p-3 bg-light">
           <h2 className="mb-2">Currency Converter</h2>
           <h4>1 {baseAcronym} to 1 {quoteAcronym} = {rate.toFixed(2)} {currencies[quoteAcronym].name}</h4>
         </div>

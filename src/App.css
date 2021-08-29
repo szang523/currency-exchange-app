@@ -1,4 +1,6 @@
-.navbar {
+.navbar,
+#root,
+body {
   background-color: #dff6cc;
 }
 
@@ -21,4 +23,16 @@ option {
 .currency-table {
   max-height: 316px;
   overflow: scroll;
+}
+
+.footer {
+  margin-top: 115px;
+}
+
+.app-body {
+  margin-bottom: -45px;
+}
+
+.bg-light {
+  border-radius: 12px;
 }
