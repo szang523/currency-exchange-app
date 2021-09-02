@@ -33,6 +33,13 @@ option {
   margin-bottom: -45px;
 }
 
-.bg-light {
+.bg-light,
+canvas.chartjs-render-monitor {
   border-radius: 12px;
+}
+
+canvas.chartjs-render-monitor {
+  background: white;
+  padding: 1rem !important;
+  margin-bottom: 1.5rem !important;
 }
